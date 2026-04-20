@@ -5,6 +5,9 @@ on: push
 jobs:
     Build:
         runs-on: ubuntu-latest
+        defaults:
+            run: 
+                working-directory: 02-using-actions/react-app
         steps:
             - name: Checkout file
               uses: actions/checkout@v4
@@ -14,10 +17,8 @@ jobs:
                     node-version: '20.x'
             - name: Install Dependecies
               run: npm install
-              working-directory: 02-using-actions/react-app
             - name: Run unit test
               run: npm run test
-              working-directory: 02-using-actions/react-app
             - name: Printing folders
               run: ls
 
