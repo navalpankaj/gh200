@@ -15,6 +15,9 @@ jobs:
             - name: Install Dependecies
               run: npm install
               working-directory: 02-using-actions/react-app
+            - name: Run unit test
+              run: npm run test
+              working-directory: 02-using-actions/react-app
             - name: Printing folders
               run: ls
 
