@@ -14,7 +14,7 @@ jobs:
                     node-version: '20.x'
             - name: Install Dependecies
               run: npm ci
-              working-directory: 02-using-actions\react-app
+              working-directory: 02-using-actions/react-app
             - name: Printing folders
               run: ls
 
