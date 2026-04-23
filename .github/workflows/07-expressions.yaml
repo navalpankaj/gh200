@@ -1,26 +1,26 @@
 name: 07 - Expressions Workflow
 
 on: 
-  - push:
-  - workflow_disptach:
-      inputs:
-        debug:
-          type: boolean
-          default: false
+  push:
+  workflow_disptach:
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
 jobs:
   echo:
     runs-on: ubuntu-latest
     steps:
       - name: '[debug]: Print Start-up'
-        if: ${{inputs.debug}}
+        if: ${{ inputs.debug }}
         run: |
           echo "Triggered by ${{github.event_name}}"
           echo "Branch: ${{github.ref}}"
           echo "Commit SHA ${{github.sha}}"
           echo "Runner OS ${runner.os}"
       - name: '[debug] Print when trigger from main'
-        if: $${{inputs.debug && guthub.ref == 'refs/heads/main'}}
+        if: ${{ inputs.debug && github.ref == 'refs/heads/main' }}
         run: echo "I have triaggered from main"
       - name: Greetings
         run: echo "Hellow World!"
