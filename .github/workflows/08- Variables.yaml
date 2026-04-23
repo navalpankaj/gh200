@@ -15,3 +15,6 @@ jobs:
                 first_name: "Pankaj"
               run: |
                 echo "Name $first_name"
+            - name : Print another variable
+              run: |
+                echo "Name $first_name"
