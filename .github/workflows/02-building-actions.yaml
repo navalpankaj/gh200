@@ -8,6 +8,7 @@ jobs:
         defaults:
             run: 
                 working-directory: 02-using-actions/react-app
+                
         steps:
             - name: Checkout file
               uses: actions/checkout@v4
