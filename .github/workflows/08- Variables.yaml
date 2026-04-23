@@ -7,6 +7,25 @@ on:
 jobs:
     echo:
         runs-on: ubuntu-latest
+        environment: PROD
+        env:
+            first_name: "Pankaj Naval"
+        steps: 
+            - name: Print Environment Variables
+              env:
+                first_name: "Pankaj"
+              run: |
+                echo "Name $first_name"
+            - name : Print another variable
+              run: |
+                echo "Name $first_name"
+            - name: Print Respository variables
+              run: |
+                echo "Respository variable value ${{vars.REP_NAME}}"
+                echo "Environment variable ${{vars.ENV_NAME}}"
+ echo_dev:
+        runs-on: ubuntu-latest
+        environment: DEV
         env:
             first_name: "Pankaj Naval"
         steps: 
