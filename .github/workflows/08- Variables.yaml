@@ -11,5 +11,7 @@ jobs:
             first_name: "Pankaj Naval"
         steps: 
             - name: Print Environment Variables
+              env:
+                first_name: "Pankaj"
               run: |
                 echo "Name $first_name"
