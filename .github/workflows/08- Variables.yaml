@@ -21,3 +21,4 @@ jobs:
             - name: Print Respository variables
               run: |
                 echo "Respository variable value ${{vars.REP_NAME}}"
+                echo "Environment variable ${{vars.ENV_NAME}}"
