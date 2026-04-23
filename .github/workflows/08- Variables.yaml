@@ -18,3 +18,6 @@ jobs:
             - name : Print another variable
               run: |
                 echo "Name $first_name"
+            - name: Print Respository variables
+              run: |
+                echo "Respository variable value ${{vars.REP_NAME}}"
