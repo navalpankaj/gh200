@@ -7,7 +7,9 @@ on:
 jobs:
     echo:
         runs-on: ubuntu-latest
+        env:
+            first_name: "Pankaj Naval"
         steps: 
             - name: Print Environment Variables
               run: |
-                echo "Print Variables"
+                echo "Name $first_name"
