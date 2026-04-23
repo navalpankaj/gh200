@@ -23,7 +23,7 @@ jobs:
               run: |
                 echo "Respository variable value ${{vars.REP_NAME}}"
                 echo "Environment variable ${{vars.ENV_NAME}}"
- echo_dev:
+    echo_dev:
         runs-on: ubuntu-latest
         environment: DEV
         env:
